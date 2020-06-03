@@ -1,0 +1,28 @@
+sudo apt update - обновляет библиотеку, где она хранит известные ей программы и их версии.
+sudo apt install python3-pip устанавливает версию pip для Python 3.
+
+Установленные библиотеки на ВМ: 
+sudo pip3 install pandas
+sudo pip3 install numpy
+
+Развертывание сервера базы данных: 
+Чтобы установить PostgreSQL, в командной строке выполните:
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+sudo apt-get install python3-psycopg2
+
+Установим библиотеки, чтобы рисовать дашборды:
+
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+ 
+import plotly.graph_objs as go
+ 
+from datetime import datetime
+ 
+import pandas as pd
+ 
+# задание данных для отрисовки
+from sqlalchemy import create_engine
